@@ -24,16 +24,16 @@ function onRenderCallback(
 function Home() {
 
   const [doctors, setDoctors] = useState([]);
-  const [services, setServices] = useState([]);
 
   useEffect(() => {
     // Simulando la carga de datos (esto normalmente vendría de una API)
     setDoctors([
       { name: 'Dr. Pérez', specialty: 'Cardiología', yearsOfExperience: 10 },
       { name: 'Dr. Gómez', specialty: 'Pediatría', yearsOfExperience: 8 },
+      { name: 'Dr. Ramirez', specialty: 'Pediatría', yearsOfExperience: 5 },
+      { name: 'Dr. Rojas', specialty: 'Cardiologia', yearsOfExperience: 3 },
     ]);
 
-    setServices(['Consulta general', 'Cirugía', 'Pediatría', 'Cardiología']);
   }, []);
 
   return (
@@ -58,16 +58,10 @@ function Home() {
 // Componente de la sección de Servicios
 function Services() {
 
-  const [doctors, setDoctors] = useState([]);
   const [services, setServices] = useState([]);
 
   useEffect(() => {
     // Simulando la carga de datos (esto normalmente vendría de una API)
-    setDoctors([
-      { name: 'Dr. Pérez', specialty: 'Cardiología', yearsOfExperience: 10 },
-      { name: 'Dr. Gómez', specialty: 'Pediatría', yearsOfExperience: 8 },
-    ]);
-
     setServices(['Consulta general', 'Cirugía', 'Pediatría', 'Cardiología']);
   }, []);
 
@@ -89,6 +83,8 @@ function Contact() {
     setDoctors([
       { name: 'Dr. Pérez', specialty: 'Cardiología', yearsOfExperience: 10 },
       { name: 'Dr. Gómez', specialty: 'Pediatría', yearsOfExperience: 8 },
+      { name: 'Dr. Ramirez', specialty: 'Pediatría', yearsOfExperience: 5 },
+      { name: 'Dr. Rojas', specialty: 'Cardiologia', yearsOfExperience: 3 },
     ]);
 
     setServices(['Consulta general', 'Cirugía', 'Pediatría', 'Cardiología']);
